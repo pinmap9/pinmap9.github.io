@@ -731,7 +731,7 @@ progress {
 }
 
     .blockquote-footer::before {
-        content: "— ";
+        content: "ï¿½ï¿½";
     }
 
 .img-fluid {
@@ -14232,4 +14232,248 @@ a {
 
 [data-bs-theme=dark] .toast-header {
     --bs-toast-header-color: #fff;
+}
+
+/* ============================================
+   CUSTOM PINMAP PRO STYLES FOR BOOTSWATCH BRITE THEME
+   ============================================
+   
+   IMPORTANT DESIGN RULES:
+   - NO blur effects or backdrop-filter
+   - NO box-shadows or drop-shadows
+   - NO gradients (use flat colors only)
+   - USE sharp 2px borders (preferably black)
+   - USE flat, bold colors from the theme
+   - KEEP animations simple (transform only)
+   - MAINTAIN clean, flat design aesthetic
+   
+   BRITE THEME CHARACTERISTICS:
+   - Primary: #a2e436 (bright lime green)
+   - Bold black borders and outlines
+   - High contrast between elements
+   - Flat design with no depth effects
+   - Clean, minimalist approach
+   ============================================ */
+
+.navbar {
+    border-bottom: 2px solid var(--bs-dark);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* Hero section adjustments */
+.bg-primary.bg-opacity-10 {
+    background-color: var(--bs-primary-bg-subtle) !important;
+}
+
+/* Card hover effects */
+.card {
+    transition: all 0.3s ease;
+    border: 2px solid var(--bs-dark);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--bs-primary);
+}
+
+/* Feature icons styling */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid var(--bs-dark);
+}
+
+.feature-icon:hover {
+    transform: scale(1.1);
+    border-width: 3px;
+}
+
+.feature-icon i {
+    font-size: 2rem !important;
+}
+
+/* Badge custom styling */
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+}
+
+/* Pricing card highlight */
+.border-primary.border-2 {
+    position: relative;
+}
+
+.border-primary.border-2::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--bs-primary), var(--bs-warning));
+    border-radius: inherit;
+    z-index: -1;
+}
+
+/* Smooth scroll padding for fixed navbar */
+html {
+    scroll-padding-top: 80px;
+}
+
+/* Typography adjustments */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.display-4 {
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* Button enhancements */
+.btn {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    filter: brightness(1.1);
+}
+
+/* Accordion custom styling */
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-primary-bg-subtle);
+    color: var(--bs-primary-text-emphasis);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bs-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bs-primary);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-primary-text-emphasis);
+}
+
+/* Icon hover effects */
+.bi {
+    transition: all 0.2s ease;
+}
+
+.btn:hover .bi {
+    transform: translateX(3px);
+}
+
+/* Section spacing */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Alert custom styling */
+.alert {
+    border: 2px solid currentColor;
+    font-weight: 500;
+}
+
+/* Specific feature icon backgrounds */
+.bg-primary.bg-opacity-25 {
+    background-color: rgba(162, 228, 54, 0.15) !important;
+}
+
+.bg-success.bg-opacity-25 {
+    background-color: rgba(104, 211, 145, 0.15) !important;
+}
+
+.bg-info.bg-opacity-25 {
+    background-color: rgba(34, 210, 237, 0.15) !important;
+}
+
+.bg-warning.bg-opacity-25 {
+    background-color: rgba(255, 199, 0, 0.15) !important;
+}
+
+.bg-danger.bg-opacity-25 {
+    background-color: rgba(245, 101, 101, 0.15) !important;
+}
+
+.bg-secondary.bg-opacity-25 {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid var(--bs-gray-300);
+}
+
+/* Feature icon enhanced styling - removed shadows to match brite theme */
+
+/* Problem section icons */
+.bg-danger.bg-opacity-90 .bi {
+    /* No shadows - clean brite style */
+}
+
+/* Hero section circular element */
+.rounded-circle {
+    border: 2px solid var(--bs-dark);
+    transition: all 0.3s ease;
+}
+
+.rounded-circle:hover {
+    transform: scale(1.1);
+    border-color: var(--bs-primary);
+}
+
+/* Hero stats card */
+.position-relative .bg-white.border-primary {
+    min-width: 200px;
+}
+
+.position-relative .bg-white.border-primary:hover {
+    transform: translateY(-5px);
+    border-color: var(--bs-warning) !important;
+}
+
+/* Premium features icons */
+.d-flex .bi {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bs-warning-bg-subtle);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.d-flex:hover .bi {
+    transform: rotate(15deg) scale(1.1);
+    background-color: var(--bs-warning);
+    color: var(--bs-dark) !important;
 }

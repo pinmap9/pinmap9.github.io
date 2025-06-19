@@ -1,40 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PinMap</title>
+    <title>PinMap Pro - Pozycjonowanie Twojej Pinezki w Google Maps</title>
+    <meta name="description" content="Zwiększ widoczność swojego biznesu lokalnego. Automatyczne pozycjonowanie pinezki Google Maps. Więcej klientów już od pierwszego dnia.">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
-    <!-- Custom CSS for future customization -->
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="custom.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">PinMap</a>
+            <a class="navbar-brand fw-bold text-dark" href="#"><i class="bi bi-geo-alt-fill text-primary"></i> PinMap Pro</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link text-dark" href="#features">Funkcje</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="components.html">Components</a>
+                        <a class="nav-link text-dark" href="#benefits">Korzyści</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link text-dark" href="#pricing">Cennik</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link text-dark" href="components.html">Demo</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary" href="#cta">Rozpocznij Teraz</a>
                     </li>
                 </ul>
             </div>
@@ -42,20 +46,87 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-primary bg-opacity-10 mt-5">
         <div class="container">
-            <div class="row align-items-center min-vh-50">
+            <div class="row align-items-center min-vh-75 py-5">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-3">Welcome to PinMap</h1>
-                    <p class="lead mb-4">Your interactive mapping solution. Explore, discover, and share locations with ease.</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Get Started</button>
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Learn More</button>
+                    <span class="badge bg-warning text-dark mb-3">🚀 Nowa Era Widoczności Lokalnej</span>
+                    <h1 class="display-4 fw-bold mb-3">Twoja Pinezka <span class="text-primary">Zawsze na Górze</span> w Google Maps</h1>
+                    <p class="lead mb-4">Czy wiesz, że <strong>87% klientów</strong> wybiera pierwsze 3 wyniki na mapie? Nie pozwól, aby Twoja kawiarnia zniknęła w tłumie konkurencji.</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="me-4">
+                            <h3 class="mb-0 text-primary">+312%</h3>
+                            <small class="text-muted">Wzrost ruchu</small>
+                        </div>
+                        <div class="me-4">
+                            <h3 class="mb-0 text-primary">24/7</h3>
+                            <small class="text-muted">Automatyzacja</small>
+                        </div>
+                        <div>
+                            <h3 class="mb-0 text-primary">5 min</h3>
+                            <small class="text-muted">Konfiguracja</small>
+                        </div>
                     </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="#cta" class="btn btn-primary btn-lg px-4 me-md-2">
+                            <i class="bi bi-rocket-takeoff"></i> Wypróbuj za Darmo (7 dni)
+                        </a>
+                        <button type="button" class="btn btn-outline-dark btn-lg px-4" data-bs-toggle="modal" data-bs-target="#videoModal">
+                            <i class="bi bi-play-circle"></i> Zobacz Jak Działa
+                        </button>
+                    </div>
+                    <p class="mt-3 text-muted"><i class="bi bi-shield-check"></i> Bez karty kredytowej • Anuluj w każdej chwili</p>
                 </div>
                 <div class="col-lg-6">
-                    <div class="text-center">
-                        <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow" alt="Map Preview">
+                    <div class="position-relative">
+                        <img src="https://via.placeholder.com/600x500/a2e436/000000?text=Mapa+z+Pinezką" class="img-fluid rounded border border-2 border-dark" alt="Google Maps Optimization">
+                        <div class="position-absolute top-0 end-0 m-3">
+                            <span class="badge bg-danger p-2 border border-2 border-dark">
+                                <i class="bi bi-fire"></i> Popularne
+                            </span>
+                        </div>
+                        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
+                            <div class="bg-white rounded p-3 border border-2 border-dark">
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary rounded-circle p-2 me-3">
+                                        <i class="bi bi-graph-up-arrow text-dark fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted d-block">Widoczność</small>
+                                        <strong class="fs-5">+89% w 30 dni</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-5 bg-danger bg-opacity-90 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-6 fw-bold mb-4">🔥 Czy Twoja Pinezka Znika w Tłumie?</h2>
+                    <p class="lead">Kiedy klient szuka "kawiarnia w pobliżu", widzi tylko TOP 3 wyniki. Reszta praktycznie nie istnieje.</p>
+                    <div class="row mt-5">
+                        <div class="col-md-4 mb-3">
+                            <i class="bi bi-x-circle display-4 mb-3"></i>
+                            <h4>Niewidoczna Pinezka</h4>
+                            <p>Pokazujesz się dopiero po przybliżeniu mapy</p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <i class="bi bi-cash-stack display-4 mb-3"></i>
+                            <h4>Tracisz Klientów</h4>
+                            <p>Konkurencja zbiera Twoich potencjalnych gości</p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <i class="bi bi-clock-history display-4 mb-3"></i>
+                            <h4>Brak Czasu</h4>
+                            <p>Ręczna optymalizacja zajmuje godziny dziennie</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,47 +134,383 @@
     </section>
 
     <!-- Features Section -->
+    <section class="py-5" id="features">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-info text-dark mb-3">Kompletne Rozwiązanie</span>
+                <h2 class="display-5 fw-bold">Funkcje Które Dają <span class="text-primary">Przewagę</span></h2>
+                <p class="lead text-muted">80% automatycznej pracy + 20% magii marketingowej</p>
+            </div>
+
+            <!-- Core Features -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-2">
+                        <div class="card-body">
+                            <div class="feature-icon bg-primary bg-opacity-25 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-robot text-primary fs-3"></i>
+                            </div>
+                            <h4 class="card-title">AI Optymalizacja 24/7</h4>
+                            <p class="card-text">Inteligentny algorytm analizuje zachowania użytkowników i automatycznie dostosowuje strategię widoczności</p>
+                            <span class="badge bg-success">Dostępne</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-2">
+                        <div class="card-body">
+                            <div class="feature-icon bg-success bg-opacity-25 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-stars text-success fs-3"></i>
+                            </div>
+                            <h4 class="card-title">Zarządzanie Opiniami</h4>
+                            <p class="card-text">Automatyczne powiadomienia o nowych recenzjach i szablony odpowiedzi zwiększające zaangażowanie</p>
+                            <span class="badge bg-success">Dostępne</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-2">
+                        <div class="card-body">
+                            <div class="feature-icon bg-info bg-opacity-25 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-graph-up text-info fs-3"></i>
+                            </div>
+                            <h4 class="card-title">Analityka Konkurencji</h4>
+                            <p class="card-text">Śledź pozycje konkurencji i otrzymuj alerty gdy wyprzedzają Cię w rankingu</p>
+                            <span class="badge bg-success">Dostępne</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-2">
+                        <div class="card-body">
+                            <div class="feature-icon bg-warning bg-opacity-25 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-camera text-warning fs-3"></i>
+                            </div>
+                            <h4 class="card-title">Optymalizacja Zdjęć</h4>
+                            <p class="card-text">AI dobiera najlepsze zdjęcia i sugeruje nowe, które zwiększą klikalność o 40%</p>
+                            <span class="badge bg-success">Dostępne</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-2">
+                        <div class="card-body">
+                            <div class="feature-icon bg-danger bg-opacity-25 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-clock text-danger fs-3"></i>
+                            </div>
+                            <h4 class="card-title">Godziny Szczytu</h4>
+                            <p class="card-text">Automatyczna aktualizacja informacji o natężeniu ruchu i optymalnych godzinach wizyt</p>
+                            <span class="badge bg-success">Dostępne</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-2">
+                        <div class="card-body">
+                            <div class="feature-icon bg-secondary bg-opacity-25 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-megaphone text-dark fs-3"></i>
+                            </div>
+                            <h4 class="card-title">Lokalne Kampanie</h4>
+                            <p class="card-text">Twórz wydarzenia i promocje widoczne bezpośrednio na mapie Google</p>
+                            <span class="badge bg-success">Dostępne</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Features -->
+            <div class="bg-light rounded-3 p-5">
+                <h3 class="text-center mb-4">🚀 Funkcje Premium (Ekskluzywny Dostęp)</h3>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="bi bi-lightning-charge-fill text-warning fs-3"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Kwantowy Boost Widoczności</h5>
+                                <p class="text-muted">Nasza tajemna technologia wykorzystuje algorytmy kwantowe do przewidywania zachowań Google</p>
+                                <span class="badge bg-warning text-dark">Beta</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="bi bi-shield-fill-check text-warning fs-3"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Ochrona Przed Negatywnymi Opiniami</h5>
+                                <p class="text-muted">System AI wykrywa i neutralizuje potencjalnie szkodliwe recenzje zanim wpłyną na ranking</p>
+                                <span class="badge bg-warning text-dark">Wkrótce</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="bi bi-people-fill text-warning fs-3"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Influencer Network</h5>
+                                <p class="text-muted">Automatyczne połączenie z lokalnymi influencerami dla organicznego wzrostu</p>
+                                <span class="badge bg-warning text-dark">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="bi bi-eye-fill text-warning fs-3"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Niewidzialna Przewaga</h5>
+                                <p class="text-muted">Technologia maskowania sprawia, że konkurencja nie wie o Twojej optymalizacji</p>
+                                <span class="badge bg-warning text-dark">Ekskluzywne</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-5 bg-light" id="benefits">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-success mb-3">Realne Rezultaty</span>
+                <h2 class="display-5 fw-bold">Co Zyskujesz z <span class="text-primary">PinMap Pro</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card border-2 h-100">
+                        <div class="card-body p-5">
+                            <i class="bi bi-cash-coin display-4 text-primary mb-3"></i>
+                            <h3>Więcej Klientów = Wyższe Przychody</h3>
+                            <ul class="list-unstyled mt-4">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Średnio +47% więcej wejść do lokalu w pierwszym miesiącu</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> ROI już po 2 tygodniach używania</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Klienci premium wydają o 65% więcej</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-2 h-100">
+                        <div class="card-body p-5">
+                            <i class="bi bi-hourglass-split display-4 text-primary mb-3"></i>
+                            <h3>Oszczędność Czasu i Spokój</h3>
+                            <ul class="list-unstyled mt-4">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> 0 godzin miesięcznie na ręczną optymalizację</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Automatyczne raporty co tydzień</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Skupiasz się na prowadzeniu biznesu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
     <section class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Features</h2>
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Dołącz do <span class="text-primary">2,847</span> Lokalnych Biznesów</h2>
+                <p class="lead text-muted">które już dominują w swoich okolicach</p>
+            </div>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <div class="feature-icon mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-geo-alt text-primary" viewBox="0 0 16 16">
-                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                                </svg>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
                             </div>
-                            <h4 class="card-title">Pin Locations</h4>
-                            <p class="card-text">Easily mark and save your favorite locations on the map.</p>
+                            <p class="mb-3">"W ciągu miesiąca nasza kawiarnia wskoczyła na 1 miejsce. Niesamowite!"</p>
+                            <small class="text-muted">- Anna K., Kawiarnia Retro, Warszawa</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <div class="feature-icon mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-share text-primary" viewBox="0 0 16 16">
-                                    <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
-                                </svg>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
                             </div>
-                            <h4 class="card-title">Share Maps</h4>
-                            <p class="card-text">Share your custom maps with friends and collaborate in real-time.</p>
+                            <p class="mb-3">"Przestałem się martwić o widoczność. PinMap robi wszystko za mnie."</p>
+                            <small class="text-muted">- Marek W., Pizzeria Bella, Kraków</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <div class="feature-icon mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-search text-primary" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                </svg>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
                             </div>
-                            <h4 class="card-title">Discover Places</h4>
-                            <p class="card-text">Explore new locations and discover hidden gems around you.</p>
+                            <p class="mb-3">"ROI? 500% w 3 miesiące. Najlepsza inwestycja w historii mojego salonu."</p>
+                            <small class="text-muted">- Katarzyna P., Salon Piękności, Wrocław</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-5 bg-light" id="pricing">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark mb-3">Prosty Cennik</span>
+                <h2 class="display-5 fw-bold">Inwestycja Która Się <span class="text-primary">Zwraca</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card border-2 h-100">
+                        <div class="card-body p-5 text-center">
+                            <h3 class="card-title">Starter</h3>
+                            <div class="display-4 fw-bold text-primary my-4">199 zł<small class="fs-6 text-muted fw-normal">/mies</small></div>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Podstawowa optymalizacja AI</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Zarządzanie opiniami</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Miesięczne raporty</li>
+                                <li class="mb-3"><i class="bi bi-x-circle text-secondary me-2"></i> Analiza konkurencji</li>
+                                <li class="mb-3"><i class="bi bi-x-circle text-secondary me-2"></i> Funkcje premium</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100">Wybierz Plan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-primary border-2 h-100">
+                        <div class="card-header bg-primary text-dark text-center py-3">
+                            <span class="badge bg-warning text-dark">NAJPOPULARNIEJSZY</span>
+                        </div>
+                        <div class="card-body p-5 text-center">
+                            <h3 class="card-title">Professional</h3>
+                            <div class="display-4 fw-bold text-primary my-4">399 zł<small class="fs-6 text-muted fw-normal">/mies</small></div>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Zaawansowana optymalizacja AI</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Zarządzanie opiniami + szablony</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Tygodniowe raporty</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Pełna analiza konkurencji</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Optymalizacja zdjęć AI</li>
+                            </ul>
+                            <button class="btn btn-primary w-100">Zacznij 7-dniowy Trial</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-2 h-100">
+                        <div class="card-body p-5 text-center">
+                            <h3 class="card-title">Enterprise</h3>
+                            <div class="display-4 fw-bold text-primary my-4">799 zł<small class="fs-6 text-muted fw-normal">/mies</small></div>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Wszystko z Professional</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Kwantowy Boost (Beta)</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Ochrona reputacji AI</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Dedykowany opiekun</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> API & Integracje</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100">Kontakt</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <p class="text-muted"><i class="bi bi-shield-check"></i> 30-dniowa gwarancja zwrotu pieniędzy • Bez ukrytych opłat • Anuluj w każdej chwili</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center mb-5">Często Zadawane Pytania</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Jak szybko zobaczę rezultaty?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Większość klientów widzi pierwsze efekty już po 48 godzinach. Pełna optymalizacja następuje w ciągu 7-14 dni, w zależności od konkurencyjności Twojej okolicy.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Czy to zgodne z wytycznymi Google?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutnie! Używamy tylko białych technik SEO i oficjalnych API Google. Twoja pinezka jest bezpieczna, a wzrost - organiczny i trwały.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Co jeśli mam kilka lokalizacji?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Oferujemy specjalne pakiety dla sieci lokali. Każda lokalizacja jest optymalizowana indywidualnie, a Ty zarządzasz wszystkim z jednego panelu. Skontaktuj się z nami po szczegóły.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-dark" id="cta">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-4">Gotowy na Dominację w Google Maps?</h2>
+                    <p class="lead mb-5">Dołącz do tysięcy lokalnych biznesów, które już wyprzedzają konkurencję</p>
+                    <form class="row g-3 justify-content-center mb-4">
+                        <div class="col-auto">
+                            <input type="email" class="form-control form-control-lg" placeholder="twoj@email.pl" required>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-dark btn-lg fw-bold">
+                                Rozpocznij Darmowy Trial <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="row justify-content-center text-center">
+                        <div class="col-auto">
+                            <i class="bi bi-check-circle me-2"></i> 7 dni za darmo
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-check-circle me-2"></i> Bez karty kredytowej
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-check-circle me-2"></i> Anuluj gdy chcesz
                         </div>
                     </div>
                 </div>
@@ -112,16 +519,64 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2024 PinMap. All rights reserved.</p>
+    <footer class="bg-black text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-primary"></i> PinMap Pro</h5>
+                    <p class="text-muted">Automatyczne pozycjonowanie Twojej pinezki w Google Maps. Więcej klientów, mniej pracy.</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-primary me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-primary me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-primary me-3"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Szybkie Linki</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#features" class="text-muted text-decoration-none">Funkcje</a></li>
+                        <li class="mb-2"><a href="#pricing" class="text-muted text-decoration-none">Cennik</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Pomoc</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Kontakt</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> kontakt@pinmappro.pl</li>
+                        <li class="mb-2"><i class="bi bi-phone me-2"></i> +48 123 456 789</li>
+                        <li class="mb-2"><i class="bi bi-clock me-2"></i> Pon-Pt: 9:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center text-muted">
+                <p class="mb-0">&copy; 2024 PinMap Pro. Wszystkie prawa zastrzeżone. | <a href="#" class="text-muted">Polityka Prywatności</a> | <a href="#" class="text-muted">Regulamin</a></p>
+            </div>
         </div>
     </footer>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Zobacz Jak PinMap Pro Zmienia Biznes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="PinMap Pro Demo" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
-    <!-- Custom JS for future functionality -->
+    <!-- Custom JS -->
     <script src="custom.js"></script>
 </body>
 </html>
