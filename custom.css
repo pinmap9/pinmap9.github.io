@@ -14269,6 +14269,15 @@ a {
     background-color: var(--bs-primary-bg-subtle) !important;
 }
 
+/* Hero image styling */
+.position-relative img.img-fluid {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    object-position: center;
+}
+
 /* Card hover effects */
 .card {
     transition: all 0.3s ease;
@@ -14307,21 +14316,73 @@ a {
     padding: 0.5rem 1rem;
 }
 
-/* Pricing card highlight */
-.border-primary.border-2 {
-    position: relative;
+/* Pricing card styles - brite theme */
+.card.border-primary {
+    border-width: 3px !important;
 }
 
-.border-primary.border-2::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, var(--bs-primary), var(--bs-warning));
-    border-radius: inherit;
-    z-index: -1;
+.display-3 {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+/* Pricing card hover */
+.card:hover .btn-outline-dark {
+    background-color: var(--bs-dark);
+    color: var(--bs-white);
+}
+
+/* Pricing header styling */
+.card-title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+/* Price display */
+.display-3.fw-bold {
+    color: var(--bs-dark) !important;
+}
+
+.display-3.fw-bold.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+/* Pricing icons - flat squares */
+.bi-square-fill.text-primary {
+    color: var(--bs-primary) !important;
+    font-size: 0.75rem !important;
+}
+
+.bi-square.text-secondary {
+    color: var(--bs-gray-400) !important;
+    font-size: 0.75rem !important;
+}
+
+/* Pricing list alignment */
+.card-body ul li.d-flex {
+    align-items: center !important;
+}
+
+.card-body ul li span {
+    line-height: 1.5;
+}
+
+/* Badge positioning fix */
+.position-absolute.top-0.start-50 {
+    top: -1rem !important;
+}
+
+/* Guarantee icons blocks */
+.bg-primary.p-3 {
+    border: 2px solid var(--bs-dark);
+}
+
+/* Pricing buttons */
+.btn-outline-dark {
+    border-width: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 /* Smooth scroll padding for fixed navbar */
@@ -14361,10 +14422,42 @@ h1, h2, h3, h4, h5, h6 {
     filter: brightness(1.1);
 }
 
-/* Accordion custom styling */
+/* Accordion custom styling - brite theme */
+.accordion-flush .accordion-item {
+    border-bottom: 2px solid var(--bs-dark);
+}
+
+.accordion-flush .accordion-item:last-child {
+    border-bottom: 0;
+}
+
+.accordion-button {
+    background-color: var(--bs-white);
+    color: var(--bs-dark);
+    font-weight: 600;
+    padding: 1.25rem;
+    border: none;
+}
+
 .accordion-button:not(.collapsed) {
-    background-color: var(--bs-primary-bg-subtle);
-    color: var(--bs-primary-text-emphasis);
+    background-color: var(--bs-primary);
+    color: var(--bs-dark);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+    padding: 1.25rem;
+    background-color: var(--bs-light);
+    border-top: 2px solid var(--bs-dark);
 }
 
 /* Custom scrollbar */
@@ -14404,6 +14497,30 @@ section {
 .alert {
     border: 2px solid currentColor;
     font-weight: 500;
+}
+
+/* Footer link hover effects */
+footer a:hover {
+    opacity: 1 !important;
+    text-decoration: underline !important;
+}
+
+/* Primary background text contrast */
+.bg-primary .text-dark {
+    color: var(--bs-dark) !important;
+    font-weight: 600;
+}
+
+/* Ensure form inputs are visible */
+.form-control {
+    border: 2px solid var(--bs-dark);
+    background-color: var(--bs-white);
+}
+
+/* Card header on primary background */
+.card-header.bg-primary {
+    color: var(--bs-dark) !important;
+    font-weight: 600;
 }
 
 /* Specific feature icon backgrounds */
