@@ -14348,15 +14348,29 @@ a {
     color: var(--bs-primary) !important;
 }
 
-/* Pricing icons - flat squares */
-.bi-square-fill.text-primary {
-    color: var(--bs-primary) !important;
-    font-size: 0.75rem !important;
+/* Pricing feature icons - perfect circles */
+.card-body ul li span.bg-primary,
+.card-body ul li span.bg-secondary {
+    width: 36px;
+    height: 36px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--bs-dark);
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
-.bi-square.text-secondary {
-    color: var(--bs-gray-400) !important;
-    font-size: 0.75rem !important;
+.card-body ul li span.bg-primary i,
+.card-body ul li span.bg-secondary i {
+    font-size: 1rem;
+    line-height: 1;
+    background-color: transparent !important;
+}
+
+/* Ensure all pricing icons have no background */
+.card-body ul li i[class*="bi-"] {
+    background-color: transparent !important;
 }
 
 /* Pricing list alignment */
@@ -14364,7 +14378,7 @@ a {
     align-items: center !important;
 }
 
-.card-body ul li span {
+.card-body ul li span:not(.bg-primary):not(.bg-secondary) {
     line-height: 1.5;
 }
 
