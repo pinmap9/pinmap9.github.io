@@ -14392,6 +14392,16 @@ a {
     border: 2px solid var(--bs-dark);
 }
 
+/* Social proof section */
+.bg-warning.p-2 {
+    border: 2px solid var(--bs-dark);
+}
+
+/* Exclusivity CTA box */
+.bg-primary.bg-opacity-10.p-4 {
+    border-width: 2px !important;
+}
+
 /* Pricing buttons */
 .btn-outline-dark {
     border-width: 2px;
@@ -14565,9 +14575,10 @@ footer a:hover {
 
 /* Feature icon enhanced styling - removed shadows to match brite theme */
 
-/* Problem section icons */
-.bg-danger.bg-opacity-90 .bi {
-    /* No shadows - clean brite style */
+/* Problem section - custom red background */
+section[style*="rgb(217, 74, 74)"] {
+    border-top: 2px solid var(--bs-dark);
+    border-bottom: 2px solid var(--bs-dark);
 }
 
 /* Hero section circular element */
