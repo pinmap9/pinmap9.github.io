@@ -21,6 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const BETTERSTACK_TOKEN = 'i9qb6UucJhM4AHRqiAuUjNQZ';
     const BETTERSTACK_URL = 'https://s1355571.eu-nbg-2.betterstackdata.com/';
     
+    // Generate or get user ID (6 letters, persistent)
+    function getUserId() {
+        let userId = localStorage.getItem('pinmap_user_id');
+        if (!userId) {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            userId = '';
+            for (let i = 0; i < 6; i++) {
+                userId += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            localStorage.setItem('pinmap_user_id', userId);
+        }
+        return userId;
+    }
+    
     // Generate or get session ID
     function getSessionId() {
         let sessionId = sessionStorage.getItem('pinmap_session_id');
@@ -31,8 +45,50 @@ document.addEventListener('DOMContentLoaded', function() {
         return sessionId;
     }
 
+    // Format date for Better Stack
+    function formatDateForBetterStack() {
+        const now = new Date();
+        return now.getUTCFullYear() + '-' + 
+               String(now.getUTCMonth() + 1).padStart(2, '0') + '-' + 
+               String(now.getUTCDate()).padStart(2, '0') + ' ' + 
+               String(now.getUTCHours()).padStart(2, '0') + ':' + 
+               String(now.getUTCMinutes()).padStart(2, '0') + ':' + 
+               String(now.getUTCSeconds()).padStart(2, '0') + ' UTC';
+    }
+
+    // Track page views
+    function trackPageView() {
+        const userId = getUserId();
+        const sessionId = getSessionId();
+        const pageName = window.location.pathname.includes('pricing') ? 'Cennik' : 
+                        window.location.pathname === '/' || window.location.pathname.includes('index') ? 'Strona główna' : 
+                        'Inna strona';
+        
+        const message = `[${userId}] Odwiedzono: ${pageName} | Session: ${sessionId} | URL: ${window.location.href} | Referrer: ${document.referrer || 'direct'}`;
+        
+        const logData = {
+            dt: formatDateForBetterStack(),
+            message: message
+        };
+
+        fetch(BETTERSTACK_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${BETTERSTACK_TOKEN}`
+            },
+            body: JSON.stringify(logData)
+        }).catch(error => {
+            console.error('Error tracking page view:', error);
+        });
+    }
+
+    // Track page view on load
+    trackPageView();
+
     // Track plan clicks
     function trackPlanClick(planName, planPrice) {
+        const userId = getUserId();
         const sessionId = getSessionId();
         const clickKey = `plan_click_${planName}_${sessionId}`;
         
@@ -44,21 +100,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mark as tracked
         sessionStorage.setItem(clickKey, 'true');
         
-        // Format date as YYYY-MM-DD HH:MM:SS UTC
-        const now = new Date();
-        const dt = now.getUTCFullYear() + '-' + 
-                   String(now.getUTCMonth() + 1).padStart(2, '0') + '-' + 
-                   String(now.getUTCDate()).padStart(2, '0') + ' ' + 
-                   String(now.getUTCHours()).padStart(2, '0') + ':' + 
-                   String(now.getUTCMinutes()).padStart(2, '0') + ':' + 
-                   String(now.getUTCSeconds()).padStart(2, '0') + ' UTC';
-        
         // Prepare message with all data
-        const message = `Plan clicked: ${planName} | Price: ${planPrice} | Session: ${sessionId} | UA: ${navigator.userAgent} | URL: ${window.location.href} | Referrer: ${document.referrer || 'direct'} | Screen: ${window.screen.width}x${window.screen.height}`;
+        const message = `[${userId}] Plan clicked: ${planName} | Price: ${planPrice} | Session: ${sessionId} | UA: ${navigator.userAgent} | URL: ${window.location.href} | Referrer: ${document.referrer || 'direct'} | Screen: ${window.screen.width}x${window.screen.height}`;
         
         // Prepare log data matching Better Stack format
         const logData = {
-            dt: dt,
+            dt: formatDateForBetterStack(),
             message: message
         };
 
