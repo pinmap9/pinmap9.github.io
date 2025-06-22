@@ -14619,3 +14619,115 @@ section[style*="rgb(217, 74, 74)"] {
     background-color: var(--bs-warning);
     color: var(--bs-dark) !important;
 }
+
+/* Mobile Optimizations for Pricing Page */
+@media (max-width: 768px) {
+    /* Reduce padding on mobile */
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Optimize hero section */
+    .mt-5 {
+        margin-top: 3rem !important;
+    }
+    
+    section.py-5.bg-primary.bg-opacity-10 .container.py-5 {
+        padding-top: 1rem !important;
+        padding-bottom: 3px !important;
+    }
+    
+    /* Reduce display text sizes */
+    .display-4 {
+        font-size: 2rem !important;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem !important;
+    }
+    
+    .display-5 {
+        font-size: 1.75rem !important;
+    }
+    
+    /* Optimize pricing cards */
+    .card-body.p-5 {
+        padding: 1.5rem !important;
+    }
+    
+    /* Smaller icons in lists */
+    .list-unstyled .bg-primary,
+    .list-unstyled .bg-secondary {
+        padding: 0.25rem !important;
+        font-size: 0.875rem;
+    }
+    
+    /* Reduce margin between list items */
+    .list-unstyled .mb-3 {
+        margin-bottom: 0.75rem !important;
+    }
+    
+    /* Optimize navbar */
+    .navbar {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    
+    /* Badge positioning fix */
+    .position-absolute.top-0.start-50.translate-middle {
+        transform: translateX(-50%) translateY(-40%) !important;
+    }
+    
+    .badge {
+        font-size: 0.75rem !important;
+        padding: 0.25rem 0.75rem !important;
+    }
+    
+    /* Footer optimizations */
+    footer.py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* CTA section */
+    #cta .lead {
+        font-size: 1rem !important;
+    }
+    
+    /* Guarantee icons */
+    .bg-primary.p-3 {
+        padding: 1.5rem !important;
+    }
+    
+    .fs-1 {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Extra small devices */
+    .display-4 {
+        font-size: 1.75rem !important;
+    }
+    
+    .display-3 {
+        font-size: 2rem !important;
+    }
+    
+    /* Even smaller card padding */
+    .card-body.p-5 {
+        padding: 1rem !important;
+    }
+    
+    /* Smaller price text */
+    .fs-3 {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Adjust button padding */
+    .btn.py-3 {
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+}

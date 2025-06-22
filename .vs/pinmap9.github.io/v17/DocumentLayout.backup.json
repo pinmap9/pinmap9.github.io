@@ -46,10 +46,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "tes",
@@ -59,8 +55,7 @@
               "RelativeToolTip": "tes",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-19T08:24:02.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T08:24:02.358Z"
             }
           ]
         },
